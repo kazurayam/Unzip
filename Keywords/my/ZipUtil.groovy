@@ -6,12 +6,19 @@ import java.util.zip.ZipInputStream
 import com.kms.katalon.core.annotation.Keyword
 
 public class ZipUtil {
+	
+	public ZipUtil() {}
 
 	@Keyword
 	public void unzip(String zipFilePath, String destDirPath) throws IOException {
 		File inputZipFile = new File(zipFilePath)
-		File destDir = new File(destDirPath).getCanonicalFile()
-		ZipInputStream zis = new ZipInputStream(new FileInputStream(inputZipFile))
+		File destDir = new File(destDirPath)
+		this.unzip(inputZipFile, destDir)
+	}
+
+	@Keyword
+	public void unzip(File zipFile, File destDir) throws IOException {
+		ZipInputStream zis = new ZipInputStream(new FileInputStream(zipFile))
 		ZipEntry zipEntry = zis.getNextEntry();
 		byte[] buffer = new byte[1024]
 		while (zipEntry != null) {
