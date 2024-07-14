@@ -63,8 +63,7 @@ public class ZipUtil {
 		zis.close();
 	}
 
-	public static File newFile(File destinationDir, ZipEntry zipEntry)
-	throws IOException {
+	private static File newFile(File destinationDir, ZipEntry zipEntry) throws IOException {
 		File destFile = new File(destinationDir, zipEntry.getName())
 		String destDirPath = destinationDir.getCanonicalPath();
 		String destFilePath = destFile.getCanonicalPath();
