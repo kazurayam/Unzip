@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>Unzip</name>
+   <name>ks_ZipUtil</name>
    <tag></tag>
    <UUID>cd8ac0bd-d841-4b75-b052-ee89e785020b</UUID>
    <migratedVersion>5.9.0</migratedVersion>

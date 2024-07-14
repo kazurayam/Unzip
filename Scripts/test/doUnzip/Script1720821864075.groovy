@@ -1,4 +1,4 @@
 String inputZip = "./sample.zip"
-String outputDir = "./unzipped"
+String outputDir = "./build/unzipped"
 
 CustomKeywords."my.ZipUtil.unzip"(inputZip, outputDir)
